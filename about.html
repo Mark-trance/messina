@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Messina</title>
+	<title>Messina</title>
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-	<h1>Messina</h1>
-	<h2>Statements of Fashion</h2> 
-	<nav>
-		<ul>
-			<li><a href="#">Women's</a></li>
-			<li><a href="#">Bath</a></li>
-			<li><a href="#">Men's</a></li>
-			<li><a href="#">Kitchen</a></li>
-		</ul>
-	</nav>
+	<header class="container">
 
-	<section>
-		<h1>Heading</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
+		<a id="header_logo" href="/">
+			<h1 class="hidden">Messina</h1>
+			<p class="hidden">Statements of Fashion</p>
+		</a> 
+		<nav>
+			<ul class="container">
+				<li><a href="TEST">WOMEN&rsquo;S</a></li>
+				<li><a href="TEST">BATH</a></li>
+				<li><a href="TEST">MEN&rsquo;S</a></li>
+				<li><a href="TEST">KITCHEN</a></li>
+			</ul>
+		</nav>
 
-		<section>
-			<h2>Heading</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
-		</section>
-	</section>
+	</header>
 
-	<div>
-		<form>
-			<input type="search" name="s"></input>
-			<button>Search</button>
-		</form>
-		<ul role="navigation">
-			<li><a href="#">Philosophy</a></li>
-			<li><a href="#">Privacy Policy</a></li>
-			<li><a href="#">Shipping &amp; Returns</a></li>
-			<li><a href="#">F.A.Q.s</a></li>
-		</ul>
+	<div class="container">
+
+		<div id="main_content">
+			<h1>About Messina</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
+			<h2>Our Mission</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in csed do eiusmod quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		</div>
+
+		<div id="sidebar">
+			<form>
+				<input type="text" name="search" placehold="Search..." />
+				<input type="submit" value="Search"/>
+			</form>
+
+			<ul role="navigation">
+				<li><a href="TEST">Philosophy</a></li>
+				<li><a href="TEST">Privacy Policy</a></li>
+				<li><a href="TEST">Shipping &amp; Returns</a></li>
+				<li><a href="TEST">F.A.Q.s</a></li>
+			</ul>
+		</div>
+
+
 	</div>
 
-	<div>
-		<ul>
-			<li><a href="#">Follow us on Twitter</a></li>
-			<li><a href="#">Like us on Facebook</a></li>
-		</ul>
 
-		<ul>
-			<li><a href="#">Philosophy</a></li>
-			<li><a href="#">Privacy Policy</a></li>
-			<li><a href="#">Shipping &amp; Returns</a></li>
-			<li><a href="#">F.A.Q.s</a></li>
-		</ul>
 
-		<ul>
-			<li><a href="#">Contact Us</a></li>
-			<li><a href="#">800.555.12345</a></li>
-		</ul>
-		<a href="#"><span>Messina Home</span></a>
-	</div>
+	<footer>
+
+		<div class="container">
+
+			<ul role="navigation">
+				<li><a href="TEST">Follow us on Twitter</a></li>
+				<li><a href="TEST">Like us on Facebook</a></li>
+			</ul>
+
+			<ul role="navigation">
+				<li><a href="#">Philosophy</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Shipping &amp; Returns</a></li>
+				<li><a href="#">F.A.Q.s</a></li>
+			</ul>
+
+			<ul role="navigation">
+				<li><a href="#">Contact Us</a></li>
+				<li>800.555.12345</li>
+			</ul>
+			<a href="/"><span class="hidden">Messina: Statements of Fashion</span></a>
+
+		</div>
+
+	</footer>
+
 
 </body>
 
