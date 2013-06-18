@@ -4,6 +4,7 @@
 p {
 	font-family: Georgia, Times, "Times New Roman", serif;
 	color: #4c4c4c;
+	word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +19,18 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
+#body_container {
+	margin-top: 50px;
+}
+
+#main_content {
+	margin-top: 0px;
+}
+
+#main_heading {
+	margin-top: 0px;
+}
+
 .left_side_element {
 	width: 700px;
 	float: left;
@@ -27,6 +40,18 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: 710px;
 }
 
+.split_text {
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
+
+	-moz-column-gap:60px; /* Firefox */
+	-webkit-column-gap:60px; /* Safari and Chrome */
+	column-gap:60px;
+
+	text-overflow: clip;
+
+}
 
 
 .hidden {
@@ -34,13 +59,27 @@ h1, h2, h3, h4, h5, h6 {
 	visibility: none;
 }
 
+/* Header */
 
 header {
 	height: 100px;
 	margin-top: 20px;
-	background-image: url(images/messina-header-logo.png);
+	background-image: url(Images/messina-header-logo.png);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center;	
+}
+
+#header_logo {
+	height: 100%;
+	width: 100%;
+}
+
+/* Body  */
+
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+
 }
 
 
@@ -80,6 +119,13 @@ nav ul li a:hover{
 	padding-top: 13px;
 	color: #2f2e46;
 	border-top: 3px solid #2f2e46;
+}
+
+
+
+#top_nav {
+	margin: 0px;
+
 }
 
 
@@ -125,9 +171,25 @@ footer ul {
 	font-style: italic;
 	text-decoration: none;
 	color: #000000;
+}
 
+#footer_picture {
+	margin-left: 900px;
 
 }
+
+#about_logo {
+	height: 93px;
+	width: 222px;
+	margin-top: 20px;
+	background-image: url(Images/messina-about-logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
 
 
 /* Sidebar */
@@ -136,10 +198,17 @@ footer ul {
 
 }
 
+#sidebar ul {
+	list-style-type: none;
+	padding: 0px;
+
+
+}
+
 #sidebar ul li {
-	magin-bottom: 10px;
-	font-size: 18px;
-	font-family: Georgia, Times, "Times New Roman", serif;
+	margin-bottom: 15px;
+
+
 
 }
 
@@ -147,6 +216,9 @@ footer ul {
 	font-style: italic;
 	color: #cfcfcf;
 	text-decoration: none;
+	font-size: 18px;	
+	font-weight: 100;
+	
 
 
 }
@@ -155,25 +227,48 @@ footer ul {
 	font-family: Arial, sans-serif;
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
-
-}
-
-#top_nav {
-
+	letter-spacing: 0.05em;
 
 }
 
 
-#about_logo {
-	height: 93px;
-	width: 222px;
-	margin-top: 20px;*/
-	background-image: url(images/messina-about-logo.png);
-	background-repeat: no-repeat;
-	background-position: center;
+/* Search Box */
+
+#search_area {
+	padding: 0px;
+
+}
+
+#search_box {
+	border: 1px solid #cfcfcf;
+	height: 30px;
+	margin: 1px;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#search_button {
+	height: 30px;
+	border-top: 1px solid #cfcfcf;
+	background-color: transparent;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #cfcfcf;
+	text-transform: uppercase;
+	font-weight: 100;
+	letter-spacing: 0.05em;
+	padding: 0px 3px 0px 3px;
+	margin: 0px 1px 0px 1px;
+
+
+
 }
 
 
+
+
+ 
 
 
 
