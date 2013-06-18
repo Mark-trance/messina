@@ -8,7 +8,30 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Arial, sans-serif;
-	color: #0064b1
+	color: #2f2e46;
+}
+
+
+.container {
+	width: 940px; 
+	position: relative; 
+	margin: 0 auto;
+}
+
+.left_side_element {
+	width: 700px;
+	float: left;
+}
+
+.right_side_element {
+	margin-left: 710px;
+}
+
+
+
+.hidden {
+	display: none;
+	visibility: none;
 }
 
 
@@ -20,18 +43,8 @@ header {
 	background-position: center;
 }
 
-footer {
-	clear: both;
-	width: 940px;
-	position: relative;	
-	margin: 0 auto;
-}
 
-footer ul {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-}
+/* Nav */
 
 nav{
 	width: 100%;
@@ -69,16 +82,79 @@ nav ul li a:hover{
 	border-top: 3px solid #2f2e46;
 }
 
-.container {
-	width: 940px; 
-	position: relative; 
+
+
+ /* Footer */
+
+footer {
+	clear: both;
+	width: 100%;
+	position: relative;	
 	margin: 0 auto;
+	border-top: 1px solid #cfcfcf;
+	background-color: #f0effa;
+}
+
+footer ul {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer_links {
+	display: inline-block;
+	margin-left: 166.5px;
+}
+
+#footer_links ul {
+	vertical-align: top;
+	padding: 0px;
+	margin: 40px 80px 120px 0px;
+	list-style-type: none;
 }
 
 
-.sidebar {
-	
+#footer_links ul li {
+	margin-bottom: 10px;
+	font-size: 16px ;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+/* better to use margin or padding for spacing these things? */
 
+#footer_links ul li a {
+	font-style: italic;
+	text-decoration: none;
+	color: #000000;
+
+
+}
+
+
+/* Sidebar */
+
+#sidebar {	
+
+}
+
+#sidebar ul li {
+	magin-bottom: 10px;
+	font-size: 18px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+
+}
+
+#sidebar ul li a {
+	font-style: italic;
+	color: #cfcfcf;
+	text-decoration: none;
+
+
+}
+
+#about_messina {
+	font-family: Arial, sans-serif;
+	border-bottom: 1px solid #2f2e46;
+	font-size: 18px;
 
 }
 
@@ -87,11 +163,6 @@ nav ul li a:hover{
 
 }
 
-
-.hidden {
-	display: none;
-	visibility: none;
-}
 
 #about_logo {
 	height: 93px;
@@ -102,15 +173,6 @@ nav ul li a:hover{
 	background-position: center;
 }
 
-
-.left_side_element {
-	width: 700px;
-	float: left;
-}
-
-.right_side_element {
-	margin-left: 710px;
-}
 
 
 
