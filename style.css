@@ -52,8 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .hidden {
-	display: none;
-	visibility: none;
+	/* display: none; */
+	/* visibility: none; */
+	position: fixed;
+	top: -9999px;
 }
 
 /* Header */
@@ -85,7 +87,7 @@ body {
 
 /* Nav */
 
-#top_nav {
+#primary_nav {
 	width: 100%;
 	height: 40px;
 	border-top: 1px solid #cfcfcf;
@@ -94,17 +96,17 @@ body {
 	margin-top: 10px;
 }
 
-#top_nav ul {
+#primary_nav ul {
 	text-align: center;
 	margin: 0;
 }
 
-#top_nav li{
+#primary_nav li{
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
 }
-#top_nav ul li a{
+#primary_nav ul li a{
 	margin: -3px 30px 10px 0; 
 	padding-top: 16px;
 	font-family: Arial, sans-serif;
@@ -118,7 +120,7 @@ body {
 	display: block;
 }
 
-#top_nav ul li a:hover{
+#primary_nav ul li a:hover{
 	margin: -3px 30px 10px 0;
 	padding-top: 13px;
 	color: #2f2e46;
@@ -131,12 +133,12 @@ body {
 	---body container doesn't need an id
 	---bottom margin to the nav instead of body container
 
-	left-side element not needed. same with right-side element
-	don't use these classes. don't 
+	---left-side element not needed. same with right-side element
+	---don't use these classes. don't 
 	---700 pixes on left. 220 or so? on the right
 	---do a FLOAT LEFT on the left. and a FLOAT RIGHT on the right (what was under body container)
 
-	4 220 columns on the footer. does not need to line up using the left-side element
+	---4 220 columns on the footer. does not need to line up using the left-side element
 	from before. just use 4 COLUMNS ON THE BOTTOM. make them the same width.
 	change the empty div to an a, and then put that span inside of their.
 	the bottom will just be 4 uls and the 'a' image.
@@ -152,16 +154,15 @@ body {
 	look at the 12 red columns in the PSD. each 300 pixels wide, with 20 pixel gutters.
 	have to measure this.
 
-	change TOP NAV to PRIMARY NAV
-	body header , body footer. CHANGE*: don't have the styles applied to ALL footers
-	and all headers.
+	---change TOP NAV to PRIMARY NAV
+	---body header , body footer. CHANGE*: don't have the styles applied to ALL footers
+	---and all headers.
 
-	**add class container to header.
 
-	get the a link logo. move the background image to the anchor. set the anchor width and height
+	---get the a link logo. move the background image to the anchor. set the anchor width and height
 	to be the widgth and height of the background image.
 
-	DON"T USE display none, use. position fixed , top: -999 px
+	----DON"T USE display none, use. position fixed , top: -999 px
 
 
 	WHEN TO USE PADDING, WHEN TO USE MARGINS?
