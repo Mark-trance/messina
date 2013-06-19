@@ -46,10 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	word-break:break-all;
 	font-size: 16px;
 	color: #4c4c4c;
-
-
 }
-
 
 .hidden {
 	/* display: none; */
@@ -57,6 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 	position: fixed;
 	top: -9999px;
 }
+
+
 
 /* Header */
 
@@ -101,12 +100,12 @@ body {
 	margin: 0;
 }
 
-#primary_nav li{
+#primary_nav li {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
 }
-#primary_nav ul li a{
+#primary_nav ul li a {
 	margin: -3px 30px 10px 0; 
 	padding-top: 16px;
 	font-family: Arial, sans-serif;
@@ -120,7 +119,7 @@ body {
 	display: block;
 }
 
-#primary_nav ul li a:hover{
+#primary_nav ul li a:hover {
 	margin: -3px 30px 10px 0;
 	padding-top: 13px;
 	color: #2f2e46;
@@ -162,7 +161,7 @@ body {
 	---get the a link logo. move the background image to the anchor. set the anchor width and height
 	to be the widgth and height of the background image.
 
-	----DON"T USE display none, use. position fixed , top: -999 px
+	---DON"T USE display none, use. position fixed , top: -999 px
 
 
 	WHEN TO USE PADDING, WHEN TO USE MARGINS?
