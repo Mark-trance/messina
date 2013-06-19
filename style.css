@@ -126,55 +126,6 @@ body {
 	border-top: 3px solid #2f2e46;
 }
 
-
-	/* NOTES margin-top . some excess on the margin in the nav
-
-	---body container doesn't need an id
-	---bottom margin to the nav instead of body container
-
-	---left-side element not needed. same with right-side element
-	---don't use these classes. don't 
-	---700 pixes on left. 220 or so? on the right
-	---do a FLOAT LEFT on the left. and a FLOAT RIGHT on the right (what was under body container)
-
-	---4 220 columns on the footer. does not need to line up using the left-side element
-	from before. just use 4 COLUMNS ON THE BOTTOM. make them the same width.
-	change the empty div to an a, and then put that span inside of their.
-	the bottom will just be 4 uls and the 'a' image.
-
-	footer is collapsing. need to use technique "CLEARFIX"
-
-	apply the shadow at the top of the footer. use box shadow. the better way is LINEAR GRADIENT.
-	use two background images. one a repeating pattern. one a linear gradient.
-
-	box-sizing for the search button. border-box vs ... Need to study the CSS box model first.
-	Box model before clearfix as well.
-
-	look at the 12 red columns in the PSD. each 300 pixels wide, with 20 pixel gutters.
-	have to measure this.
-
-	---change TOP NAV to PRIMARY NAV
-	---body header , body footer. CHANGE*: don't have the styles applied to ALL footers
-	---and all headers.
-
-
-	---get the a link logo. move the background image to the anchor. set the anchor width and height
-	to be the widgth and height of the background image.
-
-	---DON"T USE display none, use. position fixed , top: -999 px
-
-
-	WHEN TO USE PADDING, WHEN TO USE MARGINS?
-
-	when commiting, make specific comments
-
-
-	*/
-
-
-
-
-
  /* Footer */
 
 #primary_footer {
