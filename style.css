@@ -1,5 +1,9 @@
 
 
+body {
+	margin-bottom: 0px;
+
+}
 
 p {
 	font-family: Georgia, Times, "Times New Roman", serif;
@@ -13,28 +17,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .container {
 	width: 940px; 
-	position: relative; 
+	position: relative;
 	margin: 0 auto;
 }
 
-#main_content {
+#page {
+	display: table;
+	clear: both;
+	content: "";
+
+}
+
+#main-content {
 	margin-top: 0px;
 	width: 700px;
 	float: left;
 }
 
-#main_heading {
+#main-heading {
 	margin-top: 0px;
 }
 
-.left_side_element {
 
-}
-
-
-.split_text {
+.column-text {
 	-moz-column-count:2; /* Firefox */
 	-webkit-column-count:2; /* Safari and Chrome */
 	column-count:2;
@@ -56,6 +64,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* Fonts */
+
+@font-face {
+	font-family: 'junctionRegular';
+	src: url('../font/Junction-webfont.eot');
+	src: url('../font/Junction-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../font/Junction-webfont.woff') format('woff'),
+	     url('../font/Junction-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 /* Header */
 
@@ -64,7 +84,7 @@ header {
 	margin-top: 20px;	
 }
 
-#header_logo {
+#header-logo {
 	margin: 20px auto 0px auto;
 	display: block;
 	width: 222px;
@@ -86,8 +106,7 @@ body {
 
 /* Nav */
 
-#primary_nav {
-	width: 100%;
+#primary-nav {
 	height: 40px;
 	border-top: 1px solid #cfcfcf;
 	border-bottom: 1px solid #cfcfcf;
@@ -95,19 +114,20 @@ body {
 	margin-top: 10px;
 }
 
-#primary_nav ul {
+#primary-nav ul {
 	text-align: center;
 	margin: 0;
 }
 
-#primary_nav li {
+#primary-nav li {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
 }
-#primary_nav ul li a {
-	margin: -3px 30px 10px 0; 
-	padding-top: 16px;
+#primary-nav ul li a {
+	line-height: 45px;  /* 45 instead of 40? */
+	margin: -3px 30px 0px 0; 
+	/* padding-top: 16px; */
 	font-family: Arial, sans-serif;
 	font-size: 18px;
 	text-align: center;
@@ -119,42 +139,50 @@ body {
 	display: block;
 }
 
-#primary_nav ul li a:hover {
-	margin: -3px 30px 10px 0;
-	padding-top: 13px;
+#primary-nav ul li a:hover {
+	line-height: 35px;
+	margin: -3px 30px 0px 0;
+	/* padding-top: 13px; */
 	color: #2f2e46;
 	border-top: 3px solid #2f2e46;
 }
 
  /* Footer */
 
-#primary_footer {
+#primary-footer {
 	clear: both;
 	width: 100%;
 	position: relative;	
 	margin: 0 auto;
 	border-top: 1px solid #cfcfcf;
 	background-color: #f0effa;
+	/*
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) -10%,rgba(0,0,0,0) 3%), url(../Images/footer-repeat.png);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.7) -10%, rgba(0,0,0,0) 3%), url(../Images/footer-repeat.png);
+	background: -o-linear-gradient(top, rgba(0,0,0,0.7) -10%,rgba(0,0,0,0) 3%), url(../Images/footer-repeat.png);
+	background:	-ms-linear-gradient(top, rgba(0,0,0,0.7) -10%,rgba(0,0,0,0) 3%), url(../Images/footer-repeat.png);
+	background:	linear-gradient(to bottom, rgba(0,0,0,0.7) -10%,rgba(0,0,0,0) 3%), url(../Images/footer-repeat.png)
+	*/
 }
 
-#primary_footer ul {
+#primary-footer ul {
 	width: 220px;
 	display: inline-block;
 	vertical-align: top;
 	padding: 0px;
-	margin: 40px 0px 120px 0px;
+	margin: 0px;
 	list-style-type: none;
 }
 
 
-#primary_footer ul li {
+#primary-footer ul li {
 	margin-bottom: 10px;
 	font-size: 16px ;
 	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 
-#primary_footer ul li a {
+#primary-footer ul li a {
 	font-style: italic;
 	text-decoration: none;
 	color: #000000;
@@ -162,20 +190,20 @@ body {
 
 
 
-#about_logo {
+#about-logo {
 	height: 93px;
 	width: 222px;
 	margin-top: -17px;
-	display: block;
+	display: inline-block;
 	background-image: url(Images/messina-about-logo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#footer_content {
-	width: 940px;
-	position: relative;
-	margin: 0 auto;
+#footer-content {
+	/* Note that footer-content also has the container class applied to it
+	in the html, which sets height, margins, and position attributes*/
+	padding: 40px 0px 120px 0px;
 
 }
 
@@ -210,7 +238,7 @@ body {
 	font-weight: 100;
 }
 
-#sidebar_title {
+#sidebar-title {
 	font-family: Arial, sans-serif;
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
@@ -221,13 +249,13 @@ body {
 
 /* Search Box */
 
-#search_area {
+#search-area {
 	padding: 0px;
 	padding-bottom: 17px;
 
 }
 
-#search_box {
+#search-input {
 	border: 1px solid #cfcfcf;
 	height: 30px;
 	padding: 0px;
@@ -235,7 +263,7 @@ body {
 
 }
 
-#search_button {
+#search-button {
 	height: 30px;
 	border-top: 1px solid #cfcfcf;
 	background-color: transparent;
