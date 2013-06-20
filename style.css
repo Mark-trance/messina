@@ -14,6 +14,8 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'junctionRegular', Arial, sans-serif;
 	color: #2f2e46;
+	font-weight: 100;
+	letter-spacing: 0.18em;
 }
 
 
@@ -28,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: table;
 	clear: both;
 	content: "";
+	margin-bottom: 5px;
 
 }
 
@@ -47,10 +50,11 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-column-count:2; /* Safari and Chrome */
 	column-count:2;
 
-	-moz-column-gap:40px; /* Firefox */
-	-webkit-column-gap:40px; /* Safari and Chrome */
-	column-gap:40px;
+	-moz-column-gap:60px; /* Firefox */
+	-webkit-column-gap:60px; /* Safari and Chrome */
+	column-gap:60px;
 
+	padding-right: 40px;
 	word-break:break-all;
 	font-size: 16px;
 	color: #4c4c4c;
@@ -107,7 +111,7 @@ body {
 /* Nav */
 
 #nav-content {
-	
+
 }
 
 #primary-nav {
@@ -145,7 +149,7 @@ body {
 }
 
 #primary-nav ul li a:hover {
-	line-height: 35px;
+	line-height: 39px;
 	margin: -3px 30px 0px 0;
 	/* padding-top: 13px; */
 	color: #2f2e46;
@@ -170,7 +174,7 @@ body {
 }
 
 #primary-footer ul {
-	width: 220px;
+	width: 245px;
 	display: inline-block;
 	vertical-align: top;
 	padding: 0px;
@@ -202,6 +206,7 @@ body {
 	background-image: url(Images/messina-about-logo.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	margin-left: -40px;
 }
 
 #footer-content {
@@ -221,8 +226,7 @@ body {
 
 #sidebar {
 	width: 220px;
-	float: right;	
-
+	float: right;
 }
 
 #sidebar ul {
@@ -246,7 +250,7 @@ body {
 	font-family: 'junctionRegular', Arial, sans-serif;
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.04em;
 
 }
 
@@ -268,8 +272,9 @@ body {
 }
 
 #search-button {
-	height: 30px;
-	border-top: 1px solid #cfcfcf;
+	height: 32px;
+	margin: 0px 0px 0px 0px;
+	border: 1px solid #cfcfcf;
 	background-color: transparent;
 	font-family: 'junctionRegular', Arial, sans-serif;
 	font-size: 16px;
@@ -277,8 +282,6 @@ body {
 	text-transform: uppercase;
 	font-weight: 100;
 	letter-spacing: 0.05em;
-	padding: 0px 3px 0px 3px;
-	margin: 0px 1px 0px 1px;
 }
 
 
