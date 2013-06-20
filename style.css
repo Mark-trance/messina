@@ -12,7 +12,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Arial, sans-serif;
+	font-family: 'junctionRegular', Arial, sans-serif;
 	color: #2f2e46;
 }
 
@@ -106,7 +106,12 @@ body {
 
 /* Nav */
 
+#nav-content {
+	
+}
+
 #primary-nav {
+	width: 100%;
 	height: 40px;
 	border-top: 1px solid #cfcfcf;
 	border-bottom: 1px solid #cfcfcf;
@@ -128,7 +133,7 @@ body {
 	line-height: 45px;  /* 45 instead of 40? */
 	margin: -3px 30px 0px 0; 
 	/* padding-top: 16px; */
-	font-family: Arial, sans-serif;
+	font-family: 'junctionRegular', Arial, sans-serif;
 	font-size: 18px;
 	text-align: center;
 	color: #cfcfcf;
@@ -238,7 +243,7 @@ body {
 }
 
 #sidebar-title {
-	font-family: Arial, sans-serif;
+	font-family: 'junctionRegular', Arial, sans-serif;
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
 	letter-spacing: 0.05em;
@@ -266,7 +271,7 @@ body {
 	height: 30px;
 	border-top: 1px solid #cfcfcf;
 	background-color: transparent;
-	font-family: Arial, sans-serif;
+	font-family: 'junctionRegular', Arial, sans-serif;
 	font-size: 16px;
 	color: #cfcfcf;
 	text-transform: uppercase;
