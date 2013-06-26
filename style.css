@@ -251,7 +251,6 @@ body {
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
 	letter-spacing: 0.04em;
-
 }
 
 
@@ -294,6 +293,61 @@ body {
 
 
 /*  list.html new css */
+
+#product-list {
+	list-style: none;
+	padding: 0px;
+
+}
+
+
+#product-list li {
+	width: 220px;
+	height: 220px;
+	margin: 0px;
+	display: inline-block;
+	list-style: none;
+}
+
+#product-list li:nth-of-type(3n) {
+	margin: 0 0 20px 0;
+}
+
+#product-list li a {
+	width: 220px;
+	height: 220px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#big-sur-table {
+
+	background-image: url(Images/big-sur-table.png);
+}
+
+#basque-honey {
+	background-image: url(Images/basque-honey.png);
+}
+
+#cucina {
+	background-image: url(Images/cucina.png);
+}
+
+#arlington {
+	background-image: url(Images/arlington.png);
+}
+
+#pacifica {
+	background-image: url(Images/pacifica.png);
+}
+
+#sideboard {
+	background-image: url(Images/sideboard.png);
+}
+
+
+
 
 
  
