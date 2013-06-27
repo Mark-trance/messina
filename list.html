@@ -1,85 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Features List</title>
+	<title>Messina</title>
 	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-	<header>
-		<a id="header_logo" href="#">
+
+	<header class="container">
+
+		<a id="header-logo" href="/">
 			<h1 class="hidden">Messina</h1>
 			<p class="hidden">Statements of Fashion</p>
-		</a>
+		</a> 
 	</header>
 
-	<nav id="primary_nav">	
-		<ul>
-			<li><a href="TEST">WOMEN&rsquo;S</a></li>
-			<li><a href="TEST">BATH</a></li>
-			<li><a href="TEST">MEN&rsquo;S</a></li>
-			<li><a href="TEST">KITCHEN</a></li>
-		</ul>
+	<nav id="primary-nav">
+		<div id="nav-content" class="container">
+				<ul>
+					<li><a href="TEST">WOMEN&rsquo;S</a></li>
+					<li><a href="TEST">BATH</a></li>
+					<li><a href="TEST">MEN&rsquo;S</a></li>
+					<li><a href="TEST">KITCHEN</a></li>
+				</ul>
+		</div>
 	</nav>
 
-	<div class="container">
-
-		<div id="main_content">
-			<div id="picture1"> </div>
-
-
-
-
-
-
-
-		</div>
+	<div id="page" class="container">
 		<div id="sidebar">
-			<form id="search_area">
-				<input id="search_box" type="text" name="search" place="Search..." />
-				<input id="search_button" type="submit" value="SEARCH" />
+			<form id="search-area">
+				<input id="search-input" type="text" name="search" placehold="Search..." />
+				<input id="search-button" type="submit" value="SEARCH"/>
 			</form>
-			<p id="sidebar_title">Kitchen</p>
+
+			<h1 id="sidebar-title">Kitchen</h1>
+
 			<ul role="navigation">
 				<li><a href="TEST">Dining Tables &amp; Chairs</a></li>
 				<li><a href="TEST">Must Have Appliances</a></li>
 				<li><a href="TEST">Plates, Bowls, &amp; Glasses</a></li>
 				<li><a href="TEST">Tableware &amp; Accoutrement</a></li>
 			</ul>
+		</div>	
+		<div id="main-content">
+			<ul id="product-list">
+				<li>
+					<a id="big-sur-table" href="TEST">
+						<img src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
+						<h2>Big Sur Dining Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					 </a>
+				</li>
+				<li>
+					<a id="basque-honey" href="TEST">
+						<img src="Images/basque-honey.png" alt="Basque Honey Table" />
+						<h2>Basque Honey Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					</a>
+				</li>
+				<li>
+					<a id="cucina" href="TEST">
+						<img src="Images/cucina.png" alt="Cucina Table" />
+						<h2>Cucina Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					</a>
+				</li>
+				<li>
+					<a id="arlington" href="TEST">
+						<img src="Images/arlington.png" alt="Arlington Table" />
+						<h2>Arlington Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					</a>
+				</li>
+				<li>
+					<a id="pacifica" href="TEST">
+						<img src="Images/pacifica.png" alt="Pacifica Table" />
+						<h2>Pacifica Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					</a>
+				</li>
+				<li>
+					<a id="sideboard" href="TEST">
+						<img src="Images/sideboard.png" alt="Sideboard Table" />
+						<h2>Sideboard Table</h2>
+						<span>Quick View</span>
+						<p>$1499</p>
+					</a>
+				</li>
+			</ul>
 		</div>
-
 	</div>
 
-	<footer id="primary_footer">
-		<div id="footer_content">
+	<footer id="primary-footer">
+		<div id="footer-content" class="container">
 
-			<ul id="footer_first_ul" role="navigation">
+			<ul role="navigation">
 				<li><a href="TEST">Follow us on Twitter</a></li>
 				<li><a href="TEST">Like us on Facebook</a></li>
 			</ul>
 
 			<ul role="navigation">
-				<li><a href="TEST">Philosophy</a></li>
-				<li><a href="TEST">Privacy Policy</a></li>
-				<li><a href="TEST">Shipping &amp; Returns</a></li>
-				<li><a href="TEST">F.A.Q.s</a></li>
+				<li><a href="#">Philosophy</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Shipping &amp; Returns</a></li>
+				<li><a href="#">F.A.Q.s</a></li>
 			</ul>
 
 			<ul role="navigation">
 				<li><a href="#">Contact Us</a></li>
-				<li>800.555.12345</li>
+				<li><a href="PHONE CALL">800.555.12345</a></li>
 			</ul>
 
-			<ul>
-				<a id="about_logo" href="/"> <span class="hidden">Messina: Statements of Fashion</span></a>
-			</ul>
-
+			<a id="about-logo" href="#"> <span class="hidden">Messina: Statements of Fashion</span> </a>
 		</div>
 	</footer>
 
-
 </body>
-</html>
 
-
-
+</html> 
