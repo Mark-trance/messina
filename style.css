@@ -1,7 +1,8 @@
 
 
 body {
-	margin-bottom: 0px;
+	margin: 0px;
+
 
 }
 
@@ -26,11 +27,24 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
+/* Clear Fix  */
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+
+
 #page {
 	display: table;
 	clear: both;
 	content: "";
-	margin-bottom: 125px;
+	margin-bottom: 50px;
 
 }
 
@@ -85,11 +99,13 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
 	height: 100px;
-	margin-top: 20px;	
+	margin: 40px auto 0px auto;
+	width: 940px;
+	position: relative;
 }
 
 #header-logo {
-	margin: 20px auto 0px auto;
+	margin: 0px auto 0px auto;
 	display: block;
 	width: 222px;
 	height: 93px;
@@ -187,6 +203,7 @@ body {
 	margin-bottom: 10px;
 	font-size: 16px ;
 	font-family: Georgia, Times, "Times New Roman", serif;
+	opacity: .5;
 }
 
 
@@ -214,6 +231,17 @@ body {
 	in the html, which sets height, margins, and position attributes*/
 	padding: 40px 0px 120px 0px;
 
+}
+
+#primary-footer li a:hover:before,
+#primary-footer li a:active:before {
+	content: "\00BB";
+	position: absolute;	
+}
+
+#primary-footer li a:hover:before,
+#primary-footer li a:active:before {
+	margin-left: -12px;
 }
 
 
@@ -247,10 +275,23 @@ body {
 }
 
 #sidebar-title {
+	opacity: .9;
 	font-family: 'junctionRegular', Arial, sans-serif;
 	border-bottom: 1px solid #2f2e46;
 	font-size: 18px;
 	letter-spacing: 0.04em;
+}
+
+
+#sidebar li a:hover:before,
+#sidebar li a:active:before {
+	content: "\00BB";
+	position: absolute;	
+}
+
+#sidebar li a:hover:before,
+#sidebar li a:active:before {
+	margin-left: -12px;
 }
 
 
@@ -266,8 +307,8 @@ body {
 	border: 1px solid #cfcfcf;
 	height: 30px;
 	padding: 0px;
-	margin: 0px;
-
+	margin-left: 0px;
+	font-style: italic;
 }
 
 #search-button {
@@ -306,7 +347,7 @@ body {
 }
 
 #product-list li {
-	width: 218px;
+	width: 220px;
 	height: 220px;
 	margin: 0 19px 20px 0;
 	display: block;
@@ -327,15 +368,15 @@ body {
 }
 
 #product-list li:hover {
-	width: 218px;
+	width: 220px;
 	height: 220px;
 	text-decoration: none;
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.32) 70%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(70%,rgba(0,0,0,0.32))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.32) 70%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.32) 70%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.32) 70%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.32) 70%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -348,6 +389,7 @@ body {
 	position: absolute;
 	font-size: 100%;
 	top: 12px;
+	letter-spacing:.1em;
 }
 
 #product-list p {
@@ -400,8 +442,10 @@ body {
 	top: 140px;
 	margin: 0 auto;
 	text-transform: uppercase;
-	font-family: 'junctionRegular';
-	color:#565656;
+	font-family: 'junctionRegular', Arial, sans-serif;
+	color: rgba(0,0,0,.5);
+	font-size: 70%;
+
 } 
 
 #product_list li:hover span:hover {
