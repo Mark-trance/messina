@@ -475,7 +475,7 @@ body {
 }
 
 #quickview-image {
-	background-image: url(Images/big-sur-detail.png);
+	background-image: url(Images/big-sur-large.png);
 	margin: 25px 20px;
 	height: 200px;
 	width: 420px;
@@ -512,26 +512,37 @@ body {
 	float: left;
 }
 
-#quickview-specs li,
+#quickview-specs li {
+	margin: 0;
+}
 #quickview-specs p {
 	margin: 0;
 }
 
 #quickview-price {
 	font-family: 'junctionRegular', Arial, sans-serif;
-	font-size: 18px;
+	font-size: 20px;
+	opacity: .95;
 	float: right;
+	margin: 0px 70px;
+	position: relative;
+	bottom: -30px;
 }
 
 #quickview-button {
 	font-size: 16px;
 	text-transform: uppercase;
+	text-align: center;
+	opacity: .6;
+	height: auto;
+	width: auto;
+	padding: 5px 15px;
 	background-color: #ffffff;
 	border: 1px solid rgba(0,0,0,.4);
-	bottom: 0;
-	float: right;
-	margin: 0 20px 20px 20px;
+	bottom: 20px;
+	right: 20px;
 	display: block;
+	position: absolute;
 
 }
 
