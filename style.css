@@ -455,11 +455,83 @@ body {
 }
 
 
+/*  Quickview */
+
+#quickview {
+	position: absolute;
+	left: 240px;
+	top: 0px;
+	z-index: 1;
+	width: 460px;
+	background-color: #ffffff;
+  	-moz-border-radius:    10px;
+   	-webkit-border-radius: 10px;
+    border-radius:         10px;
+   	-moz-box-shadow:    1px 1px 15px 0 rgba(0,0,0,.75);
+  	-webkit-box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
+    box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
 
 
+}
+
+#quickview-image {
+	background-image: url(Images/big-sur-detail.png);
+	margin: 25px 20px;
+	height: 200px;
+	width: 420px;
+	overflow: hidden;
+}
+
+#quickview-title {
+	font-size: 20px;
+	letter-spacing: .1em;
+	opacity: .8;
+	font-family: 'junctionRegular', Arial, sans-serif;
+	text-align: left;
+	position: relative;
+	display: block;
+	margin: 0px 20px;
 
 
- 
+}
 
+#quickview-description {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 14px;
+	text-align: left;
+	position: relative;
+	display: block;
+	margin: 15px 20px;
 
+}
+
+#quickview-specs {
+	list-style-type: none;
+	margin-left: 20px;
+	padding: 0;
+	float: left;
+}
+
+#quickview-specs li,
+#quickview-specs p {
+	margin: 0;
+}
+
+#quickview-price {
+	font-family: 'junctionRegular', Arial, sans-serif;
+	font-size: 18px;
+	float: right;
+}
+
+#quickview-button {
+	font-size: 16px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	border: 1px solid rgba(0,0,0,.4);
+	bottom: 0;
+	float: right;
+	margin: 0 20px 20px 20px;
+	display: block;
+
+}
 
