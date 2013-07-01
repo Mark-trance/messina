@@ -346,6 +346,16 @@ body {
 	margin-bottom: 150px;
 }
 
+#product-list:before,
+#product-list:after {
+    content: " ";
+    display: table;
+}
+
+#product-list:after {
+    clear: both;
+}
+
 #product-list li {
 	width: 220px;
 	height: 220px;
@@ -462,7 +472,7 @@ body {
 	left: 240px;
 	top: 0px;
 	z-index: 1;
-	width: 460px;
+	width: 420px;
 	background-color: #ffffff;
   	-moz-border-radius:    10px;
    	-webkit-border-radius: 10px;
@@ -470,19 +480,22 @@ body {
    	-moz-box-shadow:    1px 1px 15px 0 rgba(0,0,0,.75);
   	-webkit-box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
     box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
+    padding: 20px;
 
 
 }
 
-#quickview-image {
-	background-image: url(Images/big-sur-large.png);
-	margin: 25px 20px;
+
+#quickview-image-holder {
+	margin: 0px 0 25px 0;
 	height: 200px;
 	width: 420px;
 	overflow: hidden;
+	position: relative;
+	top: -22px;
 }
 
-#quickview-title {
+#quickview h1 {
 	font-size: 20px;
 	letter-spacing: .1em;
 	opacity: .8;
@@ -490,43 +503,46 @@ body {
 	text-align: left;
 	position: relative;
 	display: block;
-	margin: 0px 20px;
+	margin: 0px 0px;
+	position: relative;
+	top: 223px;
 
 
 }
 
-#quickview-description {
+#quickview p {
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 14px;
 	text-align: left;
 	position: relative;
 	display: block;
-	margin: 15px 20px;
+	margin: 30px 0px 15px 0px;
 
 }
 
-#quickview-specs {
+#quickview ul {
 	list-style-type: none;
-	margin-left: 20px;
 	padding: 0;
 	float: left;
 }
 
-#quickview-specs li {
+#quickview ul li {
 	margin: 0;
 }
-#quickview-specs p {
+#quickview ul p {
 	margin: 0;
 }
 
-#quickview-price {
+#quickview h2 {
 	font-family: 'junctionRegular', Arial, sans-serif;
 	font-size: 20px;
 	opacity: .95;
 	float: right;
-	margin: 0px 70px;
+	margin: 0px 0px;
 	position: relative;
-	bottom: -30px;
+	bottom: -38px;
+	right: 46px;
+	letter-spacing: .1em;
 }
 
 #quickview-button {
