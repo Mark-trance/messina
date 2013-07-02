@@ -3,6 +3,7 @@
 <head>
 	<title>Product List | Messina</title>
 	<link rel="stylesheet" href="style.css" />
+	<script src="//localhost/Users/markds/Documents/Projects/messina/list-javascript.js"></script>
 </head>
 
 <body>
@@ -45,11 +46,11 @@
 
 			<ol id="product-list">
 				<li>
-					<a id="big-sur-table" href="TEST">
+					<a onclick="return false;" id="big-sur-table" href="#">
 						<h2>Big Sur Dining Table</h2>
 						<p>$1499</p>
 						<img src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
-						<span>Quick View</span>
+						<span onclick="displayQuickview()">Quick View</span>
 					 </a>
 				</li>
 				<li>
@@ -110,6 +111,7 @@
 				</ul>
 				<h2>$1499</h2>
 				<form id="quickview-button" type="button">Add to Cart</form>
+				<div id="quickview-arrow"></div>
 			</article>
 	</div>
 
