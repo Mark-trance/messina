@@ -377,7 +377,7 @@ body {
 	text-decoration: none;
 }
 
-#product-list li:hover {
+#product-list li:hover, .hover-on {
 	width: 220px;
 	height: 220px;
 	text-decoration: none;
@@ -390,7 +390,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-#product-list li:hover img {
+#product-list li:hover img, .hover-on img{
 	z-index: -100;
 }
 
@@ -421,7 +421,7 @@ body {
 
 /* product-list hovering */
 
-#product-list li:hover h2 {
+#product-list li:hover h2, .hover-on h2 {
 	margin: 0;
 	display: block;
 	color: #f4f4f4;
@@ -429,7 +429,7 @@ body {
 	width: 100%;
 }
 
-#product-list li:hover p {
+#product-list li:hover p, .hover-on p {
 	margin: 0;
 	display: block;
 	color: #f4f4f4; 
@@ -437,7 +437,7 @@ body {
 	width: 100%;
 }
 
-#product-list li:hover span {
+#product-list li:hover span, .hover-on span {
 	display: block;
 	width: 100px;
 	line-height: 30px;
@@ -458,7 +458,7 @@ body {
 
 } 
 
-#product_list li:hover span:hover {
+#product_list li:hover span:hover, .hover-on span {
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
 	box-shadow: 0 0 5px rgba(0,0,0,.3);
@@ -468,7 +468,7 @@ body {
 /*  Quickview */
 
 #quickview {
-	visibility: hidden;
+	display: none;
 	position: absolute;
 	left: 240px;
 	top: 0px;
@@ -569,5 +569,16 @@ body {
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent; 
 	border-right:10px solid blue 
+}
+
+#quickview-gutter {
+	top: 0px;
+	left: 0px;
+	width: 400px;
+	height: 240px;
+	position: absolute;
+	z-index: -10;
+
+
 }
 
