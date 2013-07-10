@@ -95,7 +95,7 @@
 					</a>
 				</li>
 			</ol>
-		<div id="quickview-gutter"></div>
+		<!-- <div id="quickview-gutter"></div>
 			<article id="quickview">
 				<h1 >Big Sur Dining Table</h1>
 				<div id="quickview-image-holder">
@@ -113,7 +113,7 @@
 				<h2>$1499</h2>
 				<form id="quickview-button" type="button">Add to Cart</form>
 				<div id="quickview-arrow"></div>
-			</article>
+			</article>  -->
 	</div>
 
 	<footer id="primary-footer">
@@ -140,8 +140,31 @@
 		</div>
 	</footer>
 
+
+	<script id="template-quickview" type="text/template">
+		<article id="quickview">
+				<h1 >Big Sur Dining Table</h1>
+				<div id="quickview-image-holder">
+					<img src="Images/big-sur-large.png" alt="Big Sur Dining Table">
+				</div> 
+				<p>
+					Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.
+				</p>
+				<ul >
+					<li><p>65'' x 37.5'' x 30''</p></li>
+					<li><p>Solid white oak</p></li>
+					<li><p>Seats up to six</p></li>
+					<li><p>Made in Poland</p></li>
+				</ul>
+				<h2>$1499</h2>
+				<form id="quickview-button" type="button">Add to Cart</form>
+				<div id="quickview-arrow"></div>
+		</article>
+	</script>
+
+
 	<script>
-		var $quickview = $('#quickview');
+		var $quickview = $($('#template-quickview').html());
 		<!-- need to very carefully select the right quickview -->
 		var $gutter = $('#quickview-gutter');
 		var $listItemBigSur= $('#big-sur-button').parents('li');
@@ -160,15 +183,17 @@
 				isClicked = true;
 				event.preventDefault();
 				$listItemBigSur.addClass('hover-on');
-				$quickview.fadeIn(800);
+
+				$listItemBigSur.append($quickview);
+
 				var position = $item.position();
 				var left = position.left;
-
 				if(left>=480){
 					$quickview.css({'top':position.top,'left':left-480}).addClass("right");	
 				}else{
 					$quickview.css({'top':position.top,'left':left+240});
 				}
+				$quickview.fadeIn(800);
 				//$hrefBigSur.append($quickview); 
 				return false;
 		});
@@ -176,8 +201,10 @@
 		$listItemBigSur.mouseleave( function() {
 				$li=$(this);
 				if($li.hasClass('hover-on')) {
+						$quickview = $li.find('#quickview')
 						$quickview.fadeOut(500, function() {
 								$li.removeClass('hover-on');
+								$quickview.remove();
 						});
 				}
 

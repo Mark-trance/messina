@@ -468,7 +468,6 @@ body {
 /*  Quickview */
 
 #quickview {
-	display: none;
 	position: absolute;
 	left: 240px;
 	top: 0px;
