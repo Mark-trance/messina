@@ -46,74 +46,57 @@
 		</div>	
 
 			<ol id="product-list">
-				<li>
+				<li class="product-list-item">
 					<a id="big-sur-table" href="#">
-						<h2>Big Sur Dining Table</h2>
-						<p>$1499</p>
+						<h2 class="item-title">Big Sur Dining Table</h2>
+						<p class="item-price">$1499</p>
 						<img src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
-						<span id="big-sur-button">Quick View</span>
+						<span class="quickview-button">Quick View</span>
 					 </a>
 				</li>
-				<li>
+				<li class="product-list-item">
 					<a id="basque-honey" href="TEST">
-						<h2>Basque Honey Table</h2>
-						<p>$1499</p>
+						<h2 class="item-title">Basque Honey Table</h2>
+						<p class="item-price">$1499</p>
 						<img src="Images/basque-honey.png" alt="Basque Honey Table" />
-						<span>Quick View</span>
+						<span class="quickview-button">Quick View</span>
 					</a>
 				</li>
-				<li>
+				<li class="product-list-item">
 					<a id="cucina" href="TEST">
-						<h2>Cucina Table</h2>
-						<p>$1499</p>
+						<h2 class="item-title">Cucina Table</h2>
+						<p class="item-price">$1499</p>
 						<img src="Images/cucina.png" alt="Cucina Table" />
-						<span>Quick View</span>						
+						<span class="quickview-button">Quick View</span>						
 					</a>
 				</li>
-				<li>
+				<li class="product-list-item">
 					<a id="arlington" href="TEST">
-						<h2>Arlington Table</h2>
-						<p>$1499</p>
+						<h2 class="item-title">Arlington Table</h2>
+						<p class="item-price">$1499</p>
 						<img src="Images/arlington.png" alt="Arlington Table" />
-						<span>Quick View</span>
+						<span class="quickview-button">Quick View</span>
 					</a>
 				</li>
-				<li>
+				<li class="product-list-item">
 					<a id="pacifica" href="TEST">
 						<img src="Images/pacifica.png" alt="Pacifica Table" />
-						<h2>Pacifica Table</h2>
-						<span>Quick View</span>
-						<p>$1499</p>
+						<h2 class="item-title">Pacifica Table</h2>
+						<span class="quickview-button">Quick View</span>
+						<p class="item-price">$1499</p>
 					</a>
 				</li>
-				<li>
+				<li class="product-list-item">
 					<a id="sideboard" href="TEST">
 						<img src="Images/sideboard.png" alt="Sideboard Table" />
-						<h2>Sideboard Table</h2>
-						<span>Quick View</span>
-						<p>$1499</p>
+						<h2 class="item-title">Sideboard Table</h2>
+						<span class="quickview-button">Quick View</span>
+						<p class="item-price">$1499</p>
 					</a>
 				</li>
 			</ol>
-		<div id="quickview-gutter"></div>
-			<article id="quickview">
-				<h1 >Big Sur Dining Table</h1>
-				<div id="quickview-image-holder">
-					<img src="Images/big-sur-large.png" alt="Big Sur Dining Table">
-				</div> 
-				<p>
-					Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.
-				</p>
-				<ul >
-					<li><p>65'' x 37.5'' x 30''</p></li>
-					<li><p>Solid white oak</p></li>
-					<li><p>Seats up to six</p></li>
-					<li><p>Made in Poland</p></li>
-				</ul>
-				<h2>$1499</h2>
-				<form id="quickview-button" type="button">Add to Cart</form>
-				<div id="quickview-arrow"></div>
-			</article>
+
+			
 	</div>
 
 	<footer id="primary-footer">
@@ -140,75 +123,58 @@
 		</div>
 	</footer>
 
+
+
+	<script id="template-quickview" type="text/template">
+		<article id="quickview">
+				<h1>Big Sur Dining Table</h1>
+				<div id="quickview-image-holder">
+					<img src="Images/big-sur-large.png" alt="Big Sur Dining Table">
+				</div> 
+				<p>
+					Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.
+				</p>
+				<ul >
+					<li><p>65'' x 37.5'' x 30''</p></li>
+					<li><p>Solid white oak</p></li>
+					<li><p>Seats up to six</p></li>
+					<li><p>Made in Poland</p></li>
+				</ul>
+				<h2>$1499</h2>
+				<form id="quickview-button" type="button">Add to Cart</form>
+				<div id="quickview-arrow"></div>
+		</article>
+	</script>
+
+
+
 	<script>
-		var $quickview = $('#quickview');
-		var $gutter = $('#quickview-gutter');
-		var $listItemBigSur= $('#big-sur-button').parents('li');
-		var isClicked = false;
-
-		function quickviewOn() {
-			$quickview.css('display','block');
-			$listItemBigSur.addClass('hover-on');
-		}
-		function quickviewOff() {
-			$quickview.css('display','none');
-			$listItemBigSur.removeClass('hover-on');
-		}
-
-		$('#big-sur-button').click( function(event) {
-				isClicked = true;
+		$('.quickview-button').click(function(event) {
 				event.preventDefault();
-				quickviewOn();
-				//$hrefBigSur.append($quickview); 
+				var $listItem = $(this).parents('li').addClass('active');
+				var position = $listItem.position();
+				var left = position.left;
+				var $quickview = $($('#template-quickview').html());
+
+				$listItem.append($quickview);
+
+				if( left >= 480) {
+					$quickview.css({'top':position.top,'left':left-480}).addClass("right");
+				}
+				$quickview.fadeIn(500);
+				return false;
 		});
 
-		$listItemBigSur.hover( function(){
-			if(isClicked) {
-				quickviewOn();
-				}
-			}
-			, function(){
-
-				$(this).removeClass('hover-on');
-				if(!isClicked) {
-					$quickview
-						.delay(800)
-						.queue( function(next){ 
-    						$(this).css('display','none'); 
-    						next(); 
-  						});
-					$listItemBigSur.removeClass('hover-on');
-				}
+		$('product-list-item').mouseleave(function () {
+				$li = $(this);
+				if ($li.hasClass('active')) {
+					$quickview = $li.find('#quickview')
+					$quickview.fadeOut(500, function() {
+						$li.removeClass('active');
+						$quickview.remove();
 					});
-
-		$gutter.hover( function() {
-			if(isClicked) {
-				quickviewOn();
-			}
-		}, function() {
-			if(isClicked) {
-				quickviewOff();
-				$isClicked=false;
-			}
-
-		}
-		);
-
-		$quickview.hover( function(){
-			if(isClicked) {
-				quickviewOn();
-			}	
-			}, function(){
-					$quickview
-						.delay(800)
-						.queue( function(next){ 
-    						quickviewOff(); 
-    						next(); 
-  					});		
-			});
-
-
-
+				}
+		});
 	</script>
 
 
