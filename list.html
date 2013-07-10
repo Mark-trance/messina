@@ -142,6 +142,7 @@
 
 	<script>
 		var $quickview = $('#quickview');
+		<!-- need to very carefully select the right quickview -->
 		var $gutter = $('#quickview-gutter');
 		var $listItemBigSur= $('#big-sur-button').parents('li');
 		var isClicked = false;
@@ -158,54 +159,29 @@
 		$('#big-sur-button').click( function(event) {
 				isClicked = true;
 				event.preventDefault();
-				quickviewOn();
+				$listItemBigSur.addClass('hover-on');
+				$quickview.fadeIn(800);
+				var position = $item.position();
+				var left = position.left;
+
+				if(left>=480){
+					$quickview.css({'top':position.top,'left':left-480}).addClass("right");	
+				}else{
+					$quickview.css({'top':position.top,'left':left+240});
+				}
 				//$hrefBigSur.append($quickview); 
+				return false;
 		});
 
-		$listItemBigSur.hover( function(){
-			if(isClicked) {
-				quickviewOn();
+		$listItemBigSur.mouseleave( function() {
+				$li=$(this);
+				if($li.hasClass('hover-on')) {
+						$quickview.fadeOut(500, function() {
+								$li.removeClass('hover-on');
+						});
 				}
-			}
-			, function(){
 
-				$(this).removeClass('hover-on');
-				if(!isClicked) {
-					$quickview
-						.delay(800)
-						.queue( function(next){ 
-    						$(this).css('display','none'); 
-    						next(); 
-  						});
-					$listItemBigSur.removeClass('hover-on');
-				}
-					});
-
-		$gutter.hover( function() {
-			if(isClicked) {
-				quickviewOn();
-			}
-		}, function() {
-			if(isClicked) {
-				quickviewOff();
-				$isClicked=false;
-			}
-
-		}
-		);
-
-		$quickview.hover( function(){
-			if(isClicked) {
-				quickviewOn();
-			}	
-			}, function(){
-					$quickview
-						.delay(800)
-						.queue( function(next){ 
-    						quickviewOff(); 
-    						next(); 
-  					});		
-			});
+		});
 
 
 
