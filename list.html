@@ -46,52 +46,53 @@
 		</div>	
 
 			<ol id="product-list">
-				<li>
-					<a id="big-sur-table" href="#">
-						<h2>Big Sur Dining Table</h2>
-						<p>$1499</p>
-						<img src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
-						<span id="big-sur-button">Quick View</span>
+				<li class="product-list-item">
+					<a class = "item-link" id="big-sur-table" href="#">
+						<h2 class="item-title">Big Sur Dining Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
+						<span class="item-span">Quick View</span>
 					 </a>
 				</li>
-				<li>
-					<a id="basque-honey" href="TEST">
-						<h2>Basque Honey Table</h2>
-						<p>$1499</p>
-						<img src="Images/basque-honey.png" alt="Basque Honey Table" />
-						<span>Quick View</span>
+				<li class="product-list-item">
+					<a class = "item-link" id="basque-honey" href="TEST">
+						<h2 class="item-title">Basque Honey Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/basque-honey.png" alt="Basque Honey Table" />
+						<span class="item-span">Quick View</span>
 					</a>
 				</li>
-				<li>
-					<a id="cucina" href="TEST">
-						<h2>Cucina Table</h2>
-						<p>$1499</p>
-						<img src="Images/cucina.png" alt="Cucina Table" />
-						<span>Quick View</span>						
+				<li class="product-list-item">
+					<a class = "item-link" id="cucina" href="TEST">
+						<h2 class="item-title">Cucina Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/cucina.png" alt="Cucina Table" />
+						<span class="item-span">Quick View</span>						
 					</a>
 				</li>
-				<li>
-					<a id="arlington" href="TEST">
-						<h2>Arlington Table</h2>
-						<p>$1499</p>
-						<img src="Images/arlington.png" alt="Arlington Table" />
-						<span>Quick View</span>
+				<li class="product-list-item">
+					<a class = "item-link" id="arlington" href="TEST">
+						<h2 class="item-title">Arlington Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/arlington.png" alt="Arlington Table" />
+						<span class="item-span">Quick View</span>
 					</a>
 				</li>
-				<li>
-					<a id="pacifica" href="TEST">
-						<img src="Images/pacifica.png" alt="Pacifica Table" />
-						<h2>Pacifica Table</h2>
-						<span>Quick View</span>
-						<p>$1499</p>
+				<li class="product-list-item">
+					<a class = "item-link" id="pacifica" href="TEST">
+						<h2 class="item-title">Pacifica Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/pacifica.png" alt="Pacifica Table" />
+						<span class="item-span">Quick View</span>
+						
 					</a>
 				</li>
-				<li>
-					<a id="sideboard" href="TEST">
-						<img src="Images/sideboard.png" alt="Sideboard Table" />
-						<h2>Sideboard Table</h2>
-						<span>Quick View</span>
-						<p>$1499</p>
+				<li class="product-list-item">
+					<a class = "item-link" id="sideboard" href="TEST">
+						<h2 class="item-title">Sideboard Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/sideboard.png" alt="Sideboard Table" />
+						<span class="item-span">Quick View</span>
 					</a>
 				</li>
 			</ol>
@@ -164,51 +165,50 @@
 
 
 	<script>
-		var $quickview = $($('#template-quickview').html());
-		<!-- need to very carefully select the right quickview -->
-		var $gutter = $('#quickview-gutter');
-		var $listItemBigSur= $('#big-sur-button').parents('li');
-		var isClicked = false;
+		
+		//var $gutter = $('#quickview-gutter');
+		//var isClicked = false;
 
 		function quickviewOn() {
 			$quickview.css('display','block');
-			$listItemBigSur.addClass('hover-on');
+			$listItem.addClass('hover-on');
 		}
 		function quickviewOff() {
 			$quickview.css('display','none');
-			$listItemBigSur.removeClass('hover-on');
+			$listItem.removeClass('hover-on');
 		}
 
-		$('#big-sur-button').click( function(event) {
-				isClicked = true;
+		$('.item-span').click( function(event) {
 				event.preventDefault();
-				$listItemBigSur.addClass('hover-on');
+				var $listItem= $(this).parents('li');
+				$listItem.addClass('active');
+				var $quickview = $($('#template-quickview').html());
+				$listItem.append($quickview);
 
-				$listItemBigSur.append($quickview);
-
-				var position = $item.position();
+				var position = $listItem.position();
 				var left = position.left;
 				if(left>=480){
 					$quickview.css({'top':position.top,'left':left-480}).addClass("right");	
-				}else{
+				} else {
 					$quickview.css({'top':position.top,'left':left+240});
 				}
+
 				$quickview.fadeIn(800);
-				//$hrefBigSur.append($quickview); 
 				return false;
 		});
 
-		$listItemBigSur.mouseleave( function() {
+		$('.product-list-item').mouseleave( function() {
 				$li=$(this);
-				if($li.hasClass('hover-on')) {
-						$quickview = $li.find('#quickview')
+				if($li.hasClass('active')) {
+						$quickview = $li.find('#quickview');
 						$quickview.fadeOut(500, function() {
-								$li.removeClass('hover-on');
+								$li.removeClass('active');
 								$quickview.remove();
 						});
 				}
 
 		});
+
 
 
 
