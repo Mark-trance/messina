@@ -360,15 +360,24 @@ body {
 .product-list-item {
 	width: 220px;
 	height: 220px;
-	margin: 0 19px 20px 0;
+	margin: 0 0px 0px 0;
 	display: block;
 	float: left;
 	list-style: none;
-	position: relative;	
+	position: relative;
+	-moz-background-clip: content;
+	-webkit-background-clip: content;
+	background-clip: content-box;
+	padding: 0 19px 20px 0;
+
 }
 
 .product-list-item:nth-of-type(3n) {
-	margin: 0 0 20px 0;
+	margin: 0 0 0 0;
+	padding: 0 0 20px 0;
+	-moz-background-clip: content;
+	-webkit-background-clip: content;
+	background-clip: content-box;
 }
 
 .item-link {
@@ -387,6 +396,9 @@ body {
 	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%); 
 	background: radial-gradient(ellipse at center,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
+	-moz-background-clip: content;
+	-webkit-background-clip: content;
+	background-clip: content-box;
 }
 
 .product-list-item:hover .item-image, .product-list-item.active .item-image, .suggested-list-item:hover .item-image, .suggested-list-item.active .item-image {
@@ -399,7 +411,6 @@ body {
 .suggested-list-item a:hover .item-title,.suggested-list-item a:hover .item-price,.suggested-list-item a:hover .quickview-button,
 .suggested-list-item.active .item-title,.suggested-list-item.active .item-price,.suggested-list-item.active .quickview-button{
 	position: absolute;
-	top: inherit;
 }
 
 /*
@@ -423,7 +434,8 @@ body {
 .item-title {
 	display: none;
 	position: absolute;
-	font-size: 100%;
+	font-size: 110%;
+	font-weight: 100;
 	top: 12px;
 	letter-spacing:.1em;
 }
@@ -431,7 +443,8 @@ body {
 .item-price{
 	display: none;
 	position: absolute;
-	font-size: 85%;
+	font-size: 100%;
+	font-weight: 200;
 	font-family: 'junctionRegular', Arial, sans-serif;
 	bottom: 12px;
 
@@ -453,6 +466,9 @@ body {
 	color: #f4f4f4;
 	display: block;
 	margin: 0;
+	font-size: 110%;
+	font-weight: 100;
+	position: absolute;
 	text-align: center;
 	top: 12px;
 	width: 100%;
@@ -465,6 +481,8 @@ body {
 	color: #f4f4f4; 
 	text-align: center;
 	width: 100%;
+	font-size: 100%;
+	font-weight: 200;
 }
 
 .product-list-item:hover .item-span, .product-list-item.active .item-span {
@@ -512,6 +530,7 @@ body {
   	-webkit-box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
     box-shadow: 1px 1px 15px 0 rgba(0,0,0,.75);
     padding: 20px;
+
 }
 
 
@@ -591,12 +610,38 @@ body {
 
 }
 
-#quickview-arrow {
-	width: 0; 
-	height: 0; 
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent; 
-	border-right:10px solid blue 
+
+/* Quickview Triangle thing */
+#quickview:before{
+    position: absolute;
+    width:  22px;
+    height: 19px;
+    left: -11px;
+    top: 100px;
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    border-left: 1px solid #9e9e9e;
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0px 2px 10px 0 rgba(0,0,0,.5);
+  	-webkit-box-shadow: 0px 2px 10px 0 rgba(0,0,0,.5);
+   	-moz-box-shadow: 0px 2px 10px 0 rgba(0,0,0,.5);
+    -webkit-transform: rotate( 30deg) skew(-30deg);
+	-moz-transform: rotate( 30deg) skew(-30deg);
+	-ms-transform: rotate( 30deg) skew(-30deg);
+	-o-transform: rotate( 30deg) skew(-30deg);
+    transform: rotate( 30deg ) skew(-30deg);
+}
+
+#quickview:after{
+	position: absolute;
+    width:  20px;
+    height: 40px;
+    left: 0px;
+    top: 90px;
+    content: "";
+    display: block;
+    background-color: #ffffff;
 }
 
 /*
@@ -615,6 +660,7 @@ body {
 
 /* New Javascript */
 
+
 .product-list-item:hover, .product-list-item.hover-on{
 	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%); 
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,.08)), color-stop(100%,rgba(0,0,0,.36)));
@@ -622,6 +668,7 @@ body {
 	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%); 
 	background: radial-gradient(ellipse at center,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
+	background-clip: content-box;
 }
 .product-list-item:hover .item-image, .product-list-item.hover-on .item-image {
 	position: relative;
