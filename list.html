@@ -177,13 +177,18 @@
 			$listItem.removeClass('hover-on');
 		}
 
+		var hasQuickview = false;
+
 		$('.item-span').click( function(event) {
 				event.preventDefault();
+				$quickview = $(this).find('#quickview');
 				var $listItem= $(this).parents('li');
 				$listItem.addClass('active');
-				var $quickview = $($('#template-quickview').html());
-				$listItem.append($quickview);
-
+				if(hasQuickview === false) {
+					var $quickview = $($('#template-quickview').html());
+					$listItem.append($quickview);
+					hasQuickview = true;
+				}
 				var position = $listItem.position();
 				var left = position.left;
 				if(left>=240){
@@ -195,6 +200,7 @@
 		});
 
 		$('.product-list-item').mouseleave( function() {
+				hasQuickview = false;
 				$li=$(this);
 				if($li.hasClass('active')) {
 						$quickview = $li.find('#quickview');
