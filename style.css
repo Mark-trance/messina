@@ -591,6 +591,9 @@ body {
 	bottom: -38px;
 	right: 46px;
 	letter-spacing: .1em;
+	opacity: .6;
+	bottom: -4px;
+	right: 42px;
 }
 
 #quickview-button {
@@ -644,18 +647,23 @@ body {
     background-color: #ffffff;
 }
 
-/*
-#quickview-gutter {
-	top: 0px;
-	left: 0px;
-	width: 400px;
-	height: 240px;
-	position: absolute;
-	z-index: -10;
-
+#quickview.right:before{
+	right: -11px;
+	left: auto;
+    border-top: 1px solid #9e9e9e;
+    border-right: 1px solid #9e9e9e;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: 3px 0px 10px 0 rgba(0,0,0,.5);
+  	-webkit-box-shadow: 3px 0px 10px 0 rgba(0,0,0,.5);
+   	-moz-box-shadow: 3px 0px 10px 0 rgba(0,0,0,.5);
 
 }
-*/
+#quickview.right:after{
+	right: 0;
+	left: auto;
+}
+
 
 
 /* New Javascript */

@@ -186,10 +186,8 @@
 
 				var position = $listItem.position();
 				var left = position.left;
-				if(left>=480){
-					$quickview.css({'top':position.top,'left':left-480}).addClass("right");	
-				} else {
-					$quickview.css({'top':position.top,'left':left+240});
+				if(left>=240){
+					$quickview.css({'left':left-960}).addClass("right");	
 				}
 
 				$quickview.fadeIn(800);
