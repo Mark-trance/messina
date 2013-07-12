@@ -389,7 +389,7 @@ body {
 	background: radial-gradient(ellipse at center,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
 }
 
-.product-list-item:hover img, .product-list-item.active img, .suggested-list-item:hover img, .suggested-list-item.active img {
+.product-list-item:hover .item-image, .product-list-item.active .item-image, .suggested-list-item:hover .item-image, .suggested-list-item.active .item-image {
 	position: relative;
 	z-index: -100;
 }
@@ -416,7 +416,7 @@ body {
 /*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 /*}     */
 
-.product-list-item:hover .item-image, .hover-on img{
+.product-list-item:hover .item-image, .hover-on.item-image{
 	z-index: -100;
 }
 
@@ -449,15 +449,17 @@ body {
 
 /* product-list hovering */
 
-.product-list-item:hover .item-title, #product-list.hover-on h2 {
-	margin: 0;
-	display: block;
+.product-list-item:hover .item-title, .product-list-item.active .item-title {
 	color: #f4f4f4;
+	display: block;
+	margin: 0;
 	text-align: center;
+	top: 12px;
 	width: 100%;
+
 }
 
-.product-list-item:hover .item-price, #product-list.hover-on p {
+.product-list-item:hover .item-price, .product-list-item.active .item-price {
 	margin: 0;
 	display: block;
 	color: #f4f4f4; 
@@ -465,7 +467,7 @@ body {
 	width: 100%;
 }
 
-.product-list-item:hover .item-span, #product-list.hover-on span {
+.product-list-item:hover .item-span, .product-list-item.active .item-span {
 	display: block;
 	width: 100px;
 	line-height: 30px;
@@ -487,7 +489,7 @@ body {
 
 } 
 
-.product-list-item:hover .item-span:hover, #product-list.hover-on span {
+.product-list-item:hover .item-span:hover, .product-list-item.hover-on .item-span {
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
 	box-shadow: 0 0 5px rgba(0,0,0,.3);
@@ -621,7 +623,7 @@ body {
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%); 
 	background: radial-gradient(ellipse at center,  rgba(0,0,0,.08) 0%,rgba(0,0,0,.36) 100%);
 }
-.product-list-item:hover .item-image, .product-list-item.hover-on img {
+.product-list-item:hover .item-image, .product-list-item.hover-on .item-image {
 	position: relative;
 	z-index: -100;
 }
