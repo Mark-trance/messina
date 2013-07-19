@@ -4,8 +4,8 @@ body {
 	margin: 0px;
 
 
-}
 
+}
 p {
 	font-family: Georgia, Times, "Times New Roman", serif;
 	color: #4c4c4c;
@@ -543,74 +543,107 @@ body {
 	top: -22px;
 }
 
-#quickview h1 {
-	font-size: 20px;
+#quickview h1, #right-content h1 {
 	letter-spacing: .1em;
-	opacity: .8;
 	font-family: 'junctionRegular', Arial, sans-serif;
 	text-align: left;
 	position: relative;
 	display: block;
 	margin: 0px 0px;
 	position: relative;
+
+}
+
+#quickview h1 {
+	font-size: 20px;
+	font-size: 160%;
 	top: 223px;
+	opacity: .8;
+}
+
+#right-content h1 {
+	font-size: 160%;
+}
 
 
 }
 
-#quickview p {
+#quickview p, #right-content p {
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 14px;
 	text-align: left;
 	position: relative;
 	display: block;
 	margin: 30px 0px 15px 0px;
-
 }
 
-#quickview ul {
+
+#quickview ul, #right-content ul {
 	list-style-type: none;
 	padding: 0;
 	float: left;
 }
 
 #quickview ul li {
-	margin: 0;
+	margin: 0px;
 }
-#quickview ul p {
+
+#right-content ul li {
+	margin: 2px;
+}
+
+#quickview ul p, #right-content ul p {
 	margin: 0;
 }
 
-#quickview h2 {
+#quickview h2, #right-content h2 {
 	font-family: 'junctionRegular', Arial, sans-serif;
-	font-size: 20px;
-	opacity: .95;
+	font-size: 18px;
 	float: right;
 	margin: 0px 0px;
 	position: relative;
-	bottom: -38px;
-	right: 46px;
-	letter-spacing: .1em;
+	letter-spacing: .01em;
 	opacity: .6;
-	bottom: -4px;
-	right: 42px;
+	bottom: -20px;
+	right: 0px;
 }
 
-#quickview-button {
+#quickview h2 {
+	opacity: .95;
+
+}
+
+#quickview-button, #right-content-button {
 	font-size: 16px;
 	text-transform: uppercase;
 	text-align: center;
-	opacity: .6;
 	height: auto;
 	width: auto;
 	padding: 5px 15px;
 	background-color: #ffffff;
 	border: 1px solid rgba(0,0,0,.4);
-	bottom: 20px;
-	right: 20px;
 	display: block;
 	position: absolute;
+}
 
+
+
+#quickview-button {
+	bottom: 20px;
+	right: 20px;
+	opacity: .6;
+}
+
+#right-content-button {
+	bottom: -80px;
+	float: right;
+	position: relative;
+}
+
+
+
+#right-content {
+	opacity: .6;
 }
 
 
@@ -666,7 +699,7 @@ body {
 
 
 
-/* New Javascript */
+/* Javascript new css*/
 
 
 .product-list-item:hover, .product-list-item.hover-on{
@@ -684,4 +717,52 @@ body {
 }
 
 
+
+
+/* detail.html new css  */
+
+
+#page {
+	clear: both;
+	content: "";
+	display: table;
+	width: 940px;
+
+}
+
+#content {
+	height: 500px;
+	width: 720px;
+	float: left;
+
+}
+
+#left-content {
+	display: block;
+	float: left;
+	height: 500px;
+	margin: 0px 20px 0px 0px;	
+	width: 380px;
+}
+
+#detail-image-holder {
+	height: 380px;
+	overflow: hidden;
+	position: relative;
+	width: 380px;	
+}
+
+.detail-main-image {
+	position: absolute;
+
+}
+
+#right-content {
+	display: block;
+	float: right;
+	margin: 0 20px 0 0;
+	width: 300px;
+}
+
+/* Also added the #right-content tag right next to the #quickview-image-holder tag up above */
 
