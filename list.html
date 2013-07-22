@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product List | Messina</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!-- <script src="list-javascript.js"></script> -->
+</head>
+
+<body>
+
+	<header>
+
+		<a id="header-logo" href="/">
+			<h1 class="hidden">Messina</h1>
+			<p class="hidden">Statements of Fashion</p>
+		</a> 
+	</header>
+
+	<nav id="primary-nav">
+		<div id="nav-content" class="container">
+				<ul>
+					<li><a href="TEST">WOMEN&rsquo;S</a></li>
+					<li><a href="TEST">BATH</a></li>
+					<li><a href="TEST">MEN&rsquo;S</a></li>
+					<li><a href="TEST">KITCHEN</a></li>
+				</ul>
+		</div>
+	</nav>
+
+	<div id="page" class="container">
+		<div id="sidebar">
+			<form id="search-area">
+				<input id="search-input" type="text" name="search" placeholder=" Search..." />
+				<input id="search-button" type="submit" value="SEARCH"/>
+			</form>
+
+			<h1 id="sidebar-title">Kitchen</h1>
+
+			<ul role="navigation">
+				<li><a href="TEST">Dining Tables &amp; Chairs</a></li>
+				<li><a href="TEST">Must Have Appliances</a></li>
+				<li><a href="TEST">Plates, Bowls, &amp; Glasses</a></li>
+				<li><a href="TEST">Tableware &amp; Accoutrement</a></li>
+			</ul>
+		</div>	
+
+			<ol id="product-list">
+				<li class="product-list-item">
+					<a class = "item-link" id="big-sur-table" href="#">
+						<h2 class="item-title">Big Sur Dining Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/big-sur-table.png" alt="Big Sur Dining Table" />
+						<span class="item-span">Quick View</span>
+					 </a>
+				</li>
+				<li class="product-list-item">
+					<a class = "item-link" id="basque-honey" href="TEST">
+						<h2 class="item-title">Basque Honey Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/basque-honey.png" alt="Basque Honey Table" />
+						<span class="item-span">Quick View</span>
+					</a>
+				</li>
+				<li class="product-list-item">
+					<a class = "item-link" id="cucina" href="TEST">
+						<h2 class="item-title">Cucina Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/cucina.png" alt="Cucina Table" />
+						<span class="item-span">Quick View</span>						
+					</a>
+				</li>
+				<li class="product-list-item">
+					<a class = "item-link" id="arlington" href="TEST">
+						<h2 class="item-title">Arlington Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/arlington.png" alt="Arlington Table" />
+						<span class="item-span">Quick View</span>
+					</a>
+				</li>
+				<li class="product-list-item">
+					<a class = "item-link" id="pacifica" href="TEST">
+						<h2 class="item-title">Pacifica Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/pacifica.png" alt="Pacifica Table" />
+						<span class="item-span">Quick View</span>
+						
+					</a>
+				</li>
+				<li class="product-list-item">
+					<a class = "item-link" id="sideboard" href="TEST">
+						<h2 class="item-title">Sideboard Table</h2>
+						<p class="item-price">$1499</p>
+						<img class="item-image" src="Images/sideboard.png" alt="Sideboard Table" />
+						<span class="item-span">Quick View</span>
+					</a>
+				</li>
+			</ol>
+		<!-- <div id="quickview-gutter"></div>
+			<article id="quickview">
+				<h1 >Big Sur Dining Table</h1>
+				<div id="quickview-image-holder">
+					<img src="Images/big-sur-large.png" alt="Big Sur Dining Table">
+				</div> 
+				<p>
+					Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.
+				</p>
+				<ul >
+					<li><p>65'' x 37.5'' x 30''</p></li>
+					<li><p>Solid white oak</p></li>
+					<li><p>Seats up to six</p></li>
+					<li><p>Made in Poland</p></li>
+				</ul>
+				<h2>$1499</h2>
+				<form id="quickview-button" type="button">Add to Cart</form>
+				<div id="quickview-arrow"></div>
+			</article>  -->
+	</div>
+
+	<footer id="primary-footer">
+		<div id="footer-content" class="container">
+
+			<ul role="navigation">
+				<li><a href="TEST">Follow us on Twitter</a></li>
+				<li><a href="TEST">Like us on Facebook</a></li>
+			</ul>
+
+			<ul role="navigation">
+				<li><a href="#">Philosophy</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Shipping &amp; Returns</a></li>
+				<li><a href="#">F.A.Q.s</a></li>
+			</ul>
+
+			<ul role="navigation">
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="PHONE CALL">800.555.12345</a></li>
+			</ul>
+
+			<a id="about-logo" href="#"> <span class="hidden">Messina: Statements of Fashion</span> </a>
+		</div>
+	</footer>
+
+
+	<script id="template-quickview" type="text/template">
+		<article id="quickview">
+				<h1 >Big Sur Dining Table</h1>
+				<div id="quickview-image-holder">
+					<img src="Images/big-sur-large.png" alt="Big Sur Dining Table">
+				</div> 
+				<p>
+					Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.
+				</p>
+				<ul >
+					<li><p>65'' x 37.5'' x 30''</p></li>
+					<li><p>Solid white oak</p></li>
+					<li><p>Seats up to six</p></li>
+					<li><p>Made in Poland</p></li>
+				</ul>
+				<h2>$1499</h2>
+				<form id="quickview-button" type="button">Add to Cart</form>
+		</article>
+	</script>
+
+
+	<script>
+		
+		//var $gutter = $('#quickview-gutter');
+		//var isClicked = false;
+
+		function quickviewOn() {
+			$quickview.css('display','block');
+			$listItem.addClass('hover-on');
+		}
+		function quickviewOff() {
+			$quickview.css('display','none');
+			$listItem.removeClass('hover-on');
+		}
+
+		var hasQuickview = false;
+
+		$('.item-span').click( function(event) {
+				event.preventDefault();
+				$quickview = $(this).find('#quickview');
+				var $listItem= $(this).parents('li');
+				$listItem.addClass('active');
+				if(hasQuickview === false) {
+					var $quickview = $($('#template-quickview').html());
+					$listItem.append($quickview);
+					hasQuickview = true;
+				}
+				var position = $listItem.position();
+				var left = position.left;
+				if(left>=240){
+					$quickview.css({'left':left-960}).addClass("right");	
+				}
+
+				$quickview.fadeIn(800);
+				return false;
+		});
+
+		$('.product-list-item').mouseleave( function() {
+				hasQuickview = false;
+				$li=$(this);
+				if($li.hasClass('active')) {
+						$quickview = $li.find('#quickview');
+						$quickview.fadeOut(500, function() {
+								$li.removeClass('active');
+								$quickview.remove();
+						}); 
+				}
+
+		});
+
+
+
+
+	</script>
+
+
+
+</body>
+
+</html> 
