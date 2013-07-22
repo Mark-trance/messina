@@ -764,5 +764,65 @@ body {
 	width: 300px;
 }
 
+#product-bar {
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0 0 0 0;
+
+}
+
+.thumbnail-item {
+	display: inline;
+	height: 60px;
+	margin: 0 14px 0 0;
+	width: 60px;
+
+}
+
+.thumbnail-link {
+
+
+}
+
+
+
+.thumbnail-image {
+
+	
+}
+
+
+.thumbnail-span {
+
+	
+}
+
+#lower-container {
+	display: block;
+	float: bottom;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	width: 940px;
+}
+
+#lower-container h1 {
+	float: left;
+	font-size: 20px;
+	letter-spacing: .1em;
+	opacity: .8
+
+}
+
+#suggestions-list {
+	height: 250px;
+	width: 940px;
+
+
+}
+
+
+
+
 /* Also added the #right-content tag right next to the #quickview-image-holder tag up above */
 
